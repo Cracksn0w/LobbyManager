@@ -1,0 +1,2 @@
+# LobbyManager
+Spigot Plugin: LobbyManager
