@@ -1,0 +1,5 @@
+name: LobbyManager
+version: 1.0.0
+author: Cracksn0w
+
+main: com.cracksn0w.lobbymanager.LobbyManagerPlugin
