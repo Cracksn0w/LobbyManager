@@ -17,35 +17,35 @@ public class JoinListener implements Listener {
 
 	LobbyManagerPlugin plugin;
 	
-	ArrayList<LobbyInfoItem> infoitems;
+	//ArrayList<LobbyInfoItem> infoitems;
 	
 	public JoinListener(LobbyManagerPlugin plugin) {
 		this.plugin = plugin;
 		
-		infoitems = new ArrayList<>();
+		//infoitems = new ArrayList<>();
 	}
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		Player p = event.getPlayer();
 		
-		Lobby lobby = plugin.getLobbyManager().getLobbys().get(0);
-		lobby.joinToLobby(p);
-		
-		LobbyInfoItem item = new LobbyInfoItem(p, lobby);
-		p.getInventory().addItem(item.getItemStack());
-		infoitems.add(item);
+//		Lobby lobby = plugin.getLobbyManager().getLobbys().get(0);
+//		lobby.joinToLobby(p);
+//		
+//		LobbyInfoItem item = new LobbyInfoItem(p, lobby);
+//		p.getInventory().addItem(item.getItemStack());
+//		infoitems.add(item);
 		
 		Scoreboard board = ScoreboardAPI.createScoreboard(ChatColor.GOLD + "Test");
 		ScoreboardAPI.addText(board, "Hallo");
 		
 		p.setScoreboard(board);
 		
-		p.sendMessage("Hallo in deiner Lobby sind gerade " + lobby.getPlayerCount() + " Spieler!");
+		//p.sendMessage("Hallo in deiner Lobby sind gerade " + lobby.getPlayerCount() + " Spieler!");
 		
-		for(LobbyInfoItem lii : infoitems) {
-			lii.refresh();
-		}
+//		for(LobbyInfoItem lii : infoitems) {
+//			lii.refresh();
+//		}
 	}
 	
 }
