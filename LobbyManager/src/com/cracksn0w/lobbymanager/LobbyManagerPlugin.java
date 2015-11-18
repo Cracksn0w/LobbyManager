@@ -55,6 +55,7 @@ public class LobbyManagerPlugin extends JavaPlugin {
 		return lobby_manager;
 	}
 	
+	//Method for testing purpose only
 	private void test() {
 		this.getServer().getPluginManager().registerEvents(new JoinListener(this), this);
 	}
